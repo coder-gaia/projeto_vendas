@@ -1,0 +1,15 @@
+server:
+  port: 8081
+  wait-time-in-ms-when-sync-empty: 3000
+
+spring:
+  profiles:
+    active: native
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: produto_DB
+      auto-index-creation: true
+
+application-version: 1.8

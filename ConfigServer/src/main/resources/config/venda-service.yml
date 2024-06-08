@@ -1,0 +1,23 @@
+server:
+  port: 8082
+  wait-time-in-ms-when-sync-empty: 3000
+
+spring:
+  profiles:
+    active: native
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: venda_DB
+      auto-index-creation: true
+
+application-version: 1.0
+
+application:
+  produtoService:
+    url: http://localhost:8081
+    endpointConsultarProduto: ${application.produtoService.url}/produto
+  clienteService:
+    url: http://localhost:8080
+    endpointConsultarCliente: ${application.clienteService.url}/cliente/isCadastrado/{id}
